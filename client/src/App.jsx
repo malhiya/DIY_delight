@@ -1,39 +1,77 @@
+// import React from 'react'
+// import { useRoutes } from 'react-router-dom'
+// import Navigation from './components/Navigation'
+// import ViewBags from './pages/ViewBags'
+// import EditBag from './pages/EditBag'
+// import CreateBag from './pages/CreateBag'
+// import BagDetails from './pages/BagDetails'
+// import './App.css'
+
+// const App = () => {
+//   let element = useRoutes([
+//     {
+//       path: '/',
+//       element: <CreateBag title='Bagistry| Customize' />
+//     },
+//     {
+//       path:'/customcars',
+//       element: <ViewBags title='Bagistry | Custom Cars' />
+//     },
+//     {
+//       path: '/customcars/:id',
+//       element: <BagDetails title='Bagistry | View' />
+//     },
+//     {
+//       path: '/edit/:id',
+//       element: <EditBag title='Bagistry | Edit' />
+//     }
+//   ])
+
+//   return (
+//     <div className='app'>
+
+//       <Navigation />
+
+//       { element }
+
+//     </div>
+//   )
+// }
+
+// export default App
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import Navigation from './components/Navigation'
-import ViewCars from './pages/ViewCars'
-import EditCar from './pages/EditCar'
-import CreateCar from './pages/CreateCar'
-import CarDetails from './pages/CarDetails'
+import ViewBags from './pages/ViewBags'
+import EditBag from './pages/EditBag'
+import CreateBag from './pages/CreateBag'
+import BagDetails from './pages/BagDetails'
 import './App.css'
 
 const App = () => {
   let element = useRoutes([
     {
       path: '/',
-      element: <CreateCar title='BOLT BUCKET | Customize' />
+      element: <CreateBag title='DIY Delight | Create' />
     },
     {
-      path:'/customcars',
-      element: <ViewCars title='BOLT BUCKET | Custom Cars' />
+      path: '/bags',
+      element: <ViewBags title='DIY Delight | All Bags' />
     },
     {
-      path: '/customcars/:id',
-      element: <CarDetails title='BOLT BUCKET | View' />
+      path: '/bags/:id',
+      element: <BagDetails title='DIY Delight | View' />
     },
     {
-      path: '/edit/:id',
-      element: <EditCar title='BOLT BUCKET | Edit' />
+      path: '/bags/:id/edit',
+      element: <EditBag title='DIY Delight | Edit' />
     }
   ])
 
   return (
     <div className='app'>
-
       <Navigation />
-
       { element }
-
     </div>
   )
 }

@@ -1,0 +1,259 @@
+/* Container and Header */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  /* Grid Layout for Bags */
+  .bag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+  }
+  
+  /* Individual Bag Card */
+  .bag-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bag-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: #73020c;
+  }
+  
+  /* Color stripe at top of card */
+  .bag-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #73020c, #662222);
+  }
+  
+  /* Bag Header */
+  .bag-header {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .bag-header h3 {
+    color: #2d3748;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  /* Bag Details Section */
+  .bag-details {
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+  
+  .bag-details p {
+    margin: 8px 0;
+    color: #4a5568;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .bag-details p strong {
+    color: #2d3748;
+    min-width: 100px;
+    margin-right: 10px;
+  }
+  
+  /* Price Styling */
+  .bag-details .price {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #e2e8f0;
+    font-size: 1.1rem;
+  }
+  
+  .bag-details .price strong {
+    color: #73020c;
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .button-group a,
+  .button-group button {
+    flex: 1;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  /* Button Styles */
+  .btn-details {
+    background: #73020c;
+    color: white;
+  }
+  
+  /* .btn-details:hover {
+    background: #73020c;
+    transform: scale(1.05);
+  } */
+  
+  .btn-edit {
+    background: #3182ce;
+    color: white;
+  }
+  
+  .btn-edit:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+  }
+  
+  .btn-delete {
+    background: #ef4444;
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background: #dc2626;
+    transform: scale(1.05);
+  }
+  
+  /* Empty State */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin: 20px 0;
+  }
+  
+  .empty-state p {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .empty-state a {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #6b46c1;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  
+  .empty-state a:hover {
+    background: #553c9a;
+  }
+  
+  /* Loading State */
+  .container.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    font-size: 1.2rem;
+    color: #6c757d;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .bag-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .container {
+      padding: 15px;
+    }
+    
+    .button-group {
+      flex-direction: column;
+    }
+    
+    .button-group a,
+    .button-group button {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .bag-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Special styling for different bag colors */
+  .bag-card[data-color="black"] .bag-header {
+    border-bottom-color: #000;
+  }
+  
+  .bag-card[data-color="red"] .bag-header {
+    border-bottom-color: #ef4444;
+  }
+  
+  .bag-card[data-color="navy"] .bag-header {
+    border-bottom-color: #1e3a8a;
+  }
+  
+  .bag-card[data-color="tan"] .bag-header {
+    border-bottom-color: #d2691e;
+  }
+  
+  /* Animation for card appearance */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .bag-card {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  /* Add stagger effect for cards */
+  .bag-card:nth-child(1) { animation-delay: 0.1s; }
+  .bag-card:nth-child(2) { animation-delay: 0.2s; }
+  .bag-card:nth-child(3) { animation-delay: 0.3s; }
+  .bag-card:nth-child(4) { animation-delay: 0.4s; }
+  .bag-card:nth-child(5) { animation-delay: 0.5s; }

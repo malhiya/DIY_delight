@@ -1,0 +1,152 @@
+
+.details-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-container h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #73020c;
+  }
+  
+
+  .details-container p {
+    margin: 15px 0;
+    padding: 12px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .details-container p strong {
+    color: #333;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 130px;
+  }
+  
+
+  .details-container p:has(strong:contains("Price")) {
+    background: #f0e9ff;
+    border-left: 3px solid #73020c;
+  }
+  
+ 
+  .button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .button-group button,
+  .button-group a button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+
+  .button-group a:first-child button {
+    background: #6b46c1;
+    color: white;
+  }
+  
+  .button-group a:first-child button:hover {
+    background: #553c9a;
+    transform: translateY(-2px);
+  }
+  
+
+  .delete-btn {
+    background: #ef4444;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+  }
+  
+
+  .button-group a:last-child button {
+    background: #e5e5e5;
+    color: #333;
+  }
+  
+  .button-group a:last-child button:hover {
+    background: #d0d0d0;
+    transform: translateY(-2px);
+  }
+  
+
+  .details-container p:only-child {
+    text-align: center;
+    padding: 40px;
+    background: none;
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  
+  .color-indicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-left: 10px;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .details-container {
+      margin: 20px;
+      padding: 20px;
+    }
+    
+    .details-container h2 {
+      font-size: 1.5rem;
+    }
+    
+    .details-container p strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .button-group {
+      flex-direction: column;
+    }
+    
+    .button-group button,
+    .button-group a button {
+      width: 100%;
+    }
+  }
+  
+  
+  .details-container p:hover {
+    background: #f0f0f0;
+    transition: background 0.2s;
+  }
+  
+
+  .details-container p:has(strong:contains("Created")) {
+    font-style: italic;
+    color: #777;
+  }

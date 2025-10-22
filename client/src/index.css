@@ -3,7 +3,7 @@
 #root {
     --font-family: Rubik, Verdana, sans-serif;
     --primary: rgb(115, 2, 12);
-    --primary-hover: black;
+    --primary-hover: #4C763B;
     --color: white;
     --h1-color: var(--color);
     --h2-color: var(--color);
