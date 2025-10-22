@@ -52,6 +52,7 @@ GIF created with LiceCap
 ## Notes
 
 Describe any challenges encountered while building the app or any additional context you'd like to add.
+
 I had trouble creating the image divs. I wanted to make the options show as images and then when a user hovers over the image it displays the option in text. I asked Claude for help on this and it helped me create the div and functions to make that happen. I also needed help with the CSS for CreateBag and ViewBags and Claude helped with that as well. 
 
 ## License
