@@ -17,7 +17,7 @@ The following **required** functionality is completed:
   - [X]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
 - [X] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
 - [X] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
-- [ ] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
+- [X] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
 - [X] **The price of the `CustomItem` (e.g. car) changes dynamically as different options are selected *OR* The app displays the total price of all features.**
 - [X] **The visual interface changes in response to at least one customizable feature.**
 - [X] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
@@ -53,7 +53,7 @@ GIF created with LiceCap
 
 Describe any challenges encountered while building the app or any additional context you'd like to add.
 
-I had trouble creating the image divs. I wanted to make the options show as images and then when a user hovers over the image it displays the option in text. I asked Claude for help on this and it helped me create the div and functions to make that happen. I also needed help with the CSS for CreateBag and ViewBags and Claude helped with that as well. 
+I had trouble creating the image divs in BagDetails and in CreateBag. I wanted to make the options show as images and then when a user hovers over the image it displays the option in text. I asked Claude for help on this and it helped me create the div and functions to make that happen. I also needed help with the CSS and Claude helped with that as well. 
 
 ## License
 
